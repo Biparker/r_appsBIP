@@ -1,0 +1,27 @@
+---
+title       : Kruskal Test Demo
+subtitle    : 
+author      : Bob Parker
+job         : Programmer/Analyst
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+## Slide 1 
+
+--- .class #id 
+
+## Slide 2
+---{r}
+
+require(rCharts)
+require(datasets)
+
+airquality <- as.data.frame(airquality)
+
+r2 <- rPlot(Ozone ~ Month, data = airquality, type = "bar")
+r2$save('fig/r2.html', cdn = TRUE)
+cat('<iframe src = "fig/r2.html" width = 100%, height = 600>/iframe>')
+---

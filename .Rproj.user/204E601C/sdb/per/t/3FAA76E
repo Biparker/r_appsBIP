@@ -1,0 +1,16 @@
+{
+    "contents" : "RpresBIP\n========================================================\nauthor: Bob Parker\ndate: 4/26/2015\n\nPurpose of r_apps shiny project\n========================================================\n```{r setup, include=FALSE}\nopts_chunk$set(cache=TRUE)\n```\n- The r_apps shiny project demonstrates the R kruskal test, and boxplot visualization of the test using an R sample data set: 'airquality'.\n\n- Kruskal Test in R determines difference in distribution\nof two or more sets of numeric data.\n- It is non-parametric (ie., does not) assume anything about underlying distribution of the data.\n\nSummary of Airquality Data\n========================================================\n\n```{r,echo = FALSE, kable}\n\nlibrary(knitr)\n\nkable(summary(airquality))\n\n\n\n```\n\nBoxplot Visual of Airquality Data\n========================================================\n\n```{r bplot, fig.width = 10, fig.height = 7, echo=FALSE}\n\n\nboxplot(Ozone ~ Month, data = airquality,xlab = 'Month', ylab = 'Ozone', main = \"Ozone Levels by Month\")\n\n\n```\nKruskal Test Output\n========================================================\n```{r , echo = FALSE}\nlibrary(knitr)\n\nkruskal.test(Ozone ~ Month, data = airquality)\n\n\nprint(\"A p-value of around .05 or less indicates at least one month has different distribution\")\n\n```\n\n",
+    "created" : 1430067780068.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1712579233",
+    "id" : "3FAA76E",
+    "lastKnownWriteTime" : 1430074796,
+    "path" : "C:/Users/Bob/Desktop/RpresBIP.Rpres",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_presentation"
+}
